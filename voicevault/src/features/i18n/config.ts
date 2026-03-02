@@ -23,3 +23,9 @@ export const localeOptionsList = [
   { value: locales.DE, label: "Deutsch" },
   { value: locales.FR, label: "Français" },
 ] as const;
+
+export const i18nConfig = {
+  locales: ['en-US', 'es-ES', 'ru-RU', 'de-DE', 'fr-FR'],
+  defaultLocale: 'en-US',
+  localeDetection: true,
+};

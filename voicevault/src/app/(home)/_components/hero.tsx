@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { ArrowDown } from "lucide-react";
 
 import { homeLinks, homeSections } from "@/lib/constants";
-import { InstagramForm } from "@/components/instagram-form";
+import { YoutubeForm } from "@/components/youtube-form";
 
 export function Hero() {
   const t = useTranslations("pages.home.hero");
@@ -25,7 +25,7 @@ export function Hero() {
               {t("description")}
             </p>
           </div>
-          <InstagramForm className="max-w-xl" />
+          <YoutubeForm className="max-w-xl" />
           <div className="mt-8">
             <a href={homeLinks.howItWorks}>
               <div className="text-muted-foreground mb-2 hover:underline">

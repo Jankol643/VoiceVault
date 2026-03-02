@@ -11,6 +11,7 @@ import { siteMetadata } from "@/lib/site";
 import { getLocale, getMessages } from "next-intl/server";
 
 import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
 
 const geistSans = RootFont({
   variable: "--font-root-sans",
@@ -24,20 +25,18 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
-  const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
+    <html lang='en' className="scroll-smooth" suppressHydrationWarning>
       <body className={cn("antialiased", geistSans.className)}>
-        <LocaleProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider>
           <ThemeProvider>
             <ReactQueryProvider>
               {children}
               <Toaster closeButton />
             </ReactQueryProvider>
           </ThemeProvider>
-        </LocaleProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

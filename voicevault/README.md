@@ -98,6 +98,7 @@ Follow these steps to set up and run the project locally:
 
    ```bash
    yarn install # or npm install
+   pip install yt-dlp
    ```
 
 3. **Run the development server:**

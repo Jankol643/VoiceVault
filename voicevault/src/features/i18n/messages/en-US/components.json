@@ -1,26 +1,55 @@
 {
-  "instagramForm": {
+  "youtubeForm": {
     "inputs": {
       "url": {
         "label": "Video URL",
-        "placeholder": "Paste Instagram video URL here...",
+        "placeholder": "Paste Youtube video URL here...",
         "validation": {
-          "required": "Instagram post URL is required",
-          "invalid": "Please enter a valid Instagram post URL"
+          "required": "Youtube post URL is required",
+          "invalid": "Please enter a valid Youtube video URL"
         }
+      },
+      "channelUrl": {
+        "label": "Channel URL",
+        "placeholder": "Paste Youtube channel URL here...",
+        "validation": {
+          "required": "Youtube channel URL is required",
+          "invalid": "Please enter a valid Youtube channel URL"
+        }
+      },
+      "transcriptFormat": {
+        "label": "Transcript format"
+      },
+      "transcriptLanguage": {
+        "label": "Transcript language"
       }
+    },
+    "buttons": {
+      "downloadVideo": "Download video",
+      "channelOptions": "Channel options",
+      "transcriptOptions": "Transcript options",
+      "downloadTranscript": "Download transcript",
+      "downloadChannelTranscripts": "Download channel transcripts",
+      "downloadChannel": "Download channel"
     },
     "serverErrors": {
       "notFound": "The post you are looking for was not found",
       "notVideo": "This post does not contain a video",
       "tooManyRequests": "Too many requests, please try again later",
-      "serverError": "Server is unavailable, please try again later"
+      "serverError": "Server is unavailable, please try again later",
+      "unknown": "Unknown server error"
+    },
+    "errors": {
+      "noTranscriptsAvailable": "This video does not have any available transcripts",
+      "invalidVideoId": "Invalid YouTube URL or video ID",
+      "fetchError": "Failed to fetch transcript. Please check if the video exists and has captions.",
+      "missingVideoId": "Video ID is required"
     },
     "toasts": {
       "success": "Video download is starting...",
       "error": "Something went wrong, please try again."
     },
-    "hint": "Works with Instagram posts and reels",
+    "hint": "Works with Youtube videos and channels",
     "submit": "Download"
   }
 }
